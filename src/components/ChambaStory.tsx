@@ -13,31 +13,45 @@ const slides = [
   {
     no: "01",
     label: "ARRIVAL",
-    location: "CHAMBA, HIMACHAL PRADESH · 32.55°N  76.12°E",
+    location: "CHAMBA, H.P. · RAVI VALLEY · 2,100M",
     title: "Before the roads widened.",
-    body: "A hill town so steep the postman walks. We arrived by local bus in October, when green chillies hang from every balcony like a string of small prayers. The air tastes of pine, smoke, and something fermented.",
+    body: "A hill town in the Ravi valley, so steep the postman walks. We arrived in October by local bus — the same way most people arrive, if they arrive at all. Every balcony in Chamba was hung with green chillies drying in the last of the mountain sun. The air carried pine, wood smoke, and something old and quietly fermenting.",
     image:
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1599059813005-11265ba4b4ce?auto=format&fit=crop&w=1600&q=85",
     imgFit: "object-cover",
+    imgPosition: "object-center",
   },
   {
     no: "02",
-    label: "THE HUNT",
-    location: "FIELD NOTE № 012 · THREE KITCHENS",
-    title: "Three kitchens, one recipe.",
-    body: "The chukh is a Pahadi green chilli chutney — pounded slow in stone, finished with raw mustard oil and a whisper of asafoetida. Every family in Chamba has their version. We spent three days in a stone-walled kitchen at 2,100 metres, learning the ratio between songs.",
+    label: "THE HARVEST",
+    location: "GREEN CHILLI SEASON · OCTOBER · FIELD NOTE № 012",
+    title: "Every balcony, a different recipe.",
+    body: "The Pahadi green chilli is not what you expect. Grown above two thousand metres, it develops differently from lowland varieties — less fierce, more grassy, with a slow heat that builds like a conversation. Every family in Chamba pounds their own chukh. No two are the same. No recipe has ever been written down.",
     image:
-      "https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1586348943529-beaae6c28db9?auto=format&fit=crop&w=1600&q=85",
     imgFit: "object-cover",
+    imgPosition: "object-center",
   },
   {
     no: "03",
+    label: "THE KITCHEN",
+    location: "STONE MORTAR · RAW MUSTARD OIL · THREE KITCHENS",
+    title: "Three kitchens, one ratio.",
+    body: "The method is old. Pound the chillies slow in stone — not ground, not blended. Salt at intervals to draw the juice. Raw mustard oil at the finish, sharp and grassy. A whisper of asafoetida. The ratio lives in the hands, not a recipe card. We spent three days in a stone-walled kitchen at 2,100 metres, learning the rhythm between songs.",
+    image:
+      "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1600&q=85",
+    imgFit: "object-cover",
+    imgPosition: "object-center",
+  },
+  {
+    no: "04",
     label: "THE JAR",
-    location: "SEED → POUND → JAR · VOL. 01",
+    location: "SEED → POUND → JAR · SMALL BATCH · VOL. 01",
     title: "Bottled slow. Shipped with a story.",
-    body: "No commercial preservatives. No shortcuts. A small batch from Chamba, sealed by hand, indexed in the archive. Each jar ships with Field Note № 012. Volume 01 of the Khoj archive — dangerously addictive.",
+    body: "No commercial preservatives. No shortcuts. Each jar is hand-sealed in a small batch, indexed as Field Note № 012 in the Khoj archive. It ships with the field note — because the flavour alone is only half of it. This is what disappearing India tastes like, before the road reaches it.",
     image: "/img/chamba-chukh.png",
     imgFit: "object-contain",
+    imgPosition: "object-center",
   },
 ];
 
@@ -46,7 +60,10 @@ export function ChambaStory({ open, onClose }: Props) {
   const [dir, setDir] = useState(1);
 
   useEffect(() => {
-    if (!open) { setSlide(0); return; }
+    if (!open) {
+      setSlide(0);
+      return;
+    }
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
       if (e.key === "ArrowRight") navigate(1);
@@ -84,7 +101,7 @@ export function ChambaStory({ open, onClose }: Props) {
             <X size={16} />
           </button>
 
-          {/* Slide counter — top left */}
+          {/* Top label */}
           <div className="absolute top-6 left-6 z-20 font-mono text-[10px] uppercase tracking-[0.4em] text-cream/50">
             KHOJ FIELD DISPATCH · {s.no} / {slides.length}
           </div>
@@ -105,7 +122,7 @@ export function ChambaStory({ open, onClose }: Props) {
                 <p className="mt-1.5 font-mono text-[9px] uppercase tracking-[0.3em] text-cream/50">
                   {s.location}
                 </p>
-                <h2 className="mt-7 font-display text-4xl sm:text-5xl lg:text-[3.5rem] text-cream leading-[1.02]">
+                <h2 className="mt-7 font-display text-4xl sm:text-5xl lg:text-[3.25rem] text-cream leading-[1.02]">
                   {s.title}
                 </h2>
                 <p className="mt-6 text-cream/80 font-serif text-base sm:text-lg leading-relaxed max-w-md">
@@ -114,7 +131,7 @@ export function ChambaStory({ open, onClose }: Props) {
               </motion.div>
             </AnimatePresence>
 
-            {/* Navigation row */}
+            {/* Navigation */}
             <div className="mt-12 flex items-center gap-4">
               <button
                 onClick={() => navigate(-1)}
@@ -124,7 +141,6 @@ export function ChambaStory({ open, onClose }: Props) {
                 <ChevronLeft size={15} />
               </button>
 
-              {/* Progress segments */}
               <div className="flex gap-1.5 items-center">
                 {slides.map((_, i) => (
                   <button
@@ -134,7 +150,9 @@ export function ChambaStory({ open, onClose }: Props) {
                       setSlide(i);
                     }}
                     className={`h-px rounded-full transition-all duration-500 ${
-                      i === slide ? "w-10 bg-ember" : "w-5 bg-cream/25 hover:bg-cream/50"
+                      i === slide
+                        ? "w-10 bg-ember"
+                        : "w-5 bg-cream/25 hover:bg-cream/50"
                     }`}
                   />
                 ))}
@@ -163,35 +181,34 @@ export function ChambaStory({ open, onClose }: Props) {
             </div>
           </div>
 
-          {/* Right — image */}
+          {/* Right — image (desktop) */}
           <div className="hidden lg:block lg:w-[48%] relative overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.div
                 key={slide + "-img"}
-                initial={{ opacity: 0, scale: 1.05 }}
+                initial={{ opacity: 0, scale: 1.06 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.97 }}
-                transition={{ duration: 0.7, ease: EASE }}
+                transition={{ duration: 0.75, ease: EASE }}
                 className="absolute inset-0"
               >
                 <img
                   src={s.image}
                   alt={s.label}
-                  className={`w-full h-full ${s.imgFit} ${
+                  className={`w-full h-full ${s.imgFit} ${s.imgPosition} ${
                     s.imgFit === "object-contain" ? "bg-ink p-16" : ""
                   }`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-ink/50 via-ink/10 to-transparent" />
-                {/* Slide label watermark on image */}
-                <div className="absolute bottom-8 right-8 font-mono text-[9px] uppercase tracking-[0.35em] text-cream/30">
+                <div className="absolute inset-0 bg-gradient-to-r from-ink/40 via-ink/5 to-transparent" />
+                <div className="absolute bottom-8 right-8 font-mono text-[9px] uppercase tracking-[0.35em] text-cream/25">
                   {s.label} · CHAMBA
                 </div>
               </motion.div>
             </AnimatePresence>
           </div>
 
-          {/* Mobile image strip — visible only on small screens */}
-          <div className="absolute inset-x-0 bottom-0 h-48 lg:hidden overflow-hidden">
+          {/* Mobile — image strip at bottom */}
+          <div className="absolute inset-x-0 bottom-0 h-44 lg:hidden overflow-hidden pointer-events-none">
             <AnimatePresence mode="wait">
               <motion.img
                 key={slide + "-mob"}
@@ -201,10 +218,10 @@ export function ChambaStory({ open, onClose }: Props) {
                 transition={{ duration: 0.5 }}
                 src={s.image}
                 alt={s.label}
-                className={`w-full h-full ${s.imgFit}`}
+                className={`w-full h-full ${s.imgFit} ${s.imgPosition}`}
               />
             </AnimatePresence>
-            <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-transparent" />
           </div>
         </motion.div>
       )}
