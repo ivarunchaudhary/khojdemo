@@ -55,10 +55,10 @@ export const mixtape = {
   eyebrow: "NOW PLAYING — MIXTAPE № 04",
   title: "Highway 1A, after dark.",
   tracks: [
-    { title: "Track One", artist: "ARTIST NAME", time: "7:42" },
-    { title: "Track Two", artist: "ARTIST NAME", time: "5:58" },
-    { title: "Track Three", artist: "ARTIST NAME", time: "5:08" },
-    { title: "Track Four", artist: "ARTIST NAME", time: "4:32" },
-    { title: "Track Five", artist: "ARTIST NAME", time: "4:15" },
+    { title: "Tere Bin", artist: "NUSRAT FATEH ALI KHAN", time: "7:42" },
+    { title: "Jugni", artist: "CLINTON CEREJO · VISHAL DADLANI", time: "5:30" },
+    { title: "Iktara", artist: "AMIT TRIVEDI", time: "4:08" },
+    { title: "Kho Gaye Hum Kahan", artist: "PRATEEK KUHAD", time: "4:28" },
+    { title: "Pareshaan", artist: "AMIT TRIVEDI", time: "4:45" },
   ],
 };
