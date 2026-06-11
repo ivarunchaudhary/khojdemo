@@ -20,7 +20,7 @@ export function CartDrawer() {
       >
         <div className="flex items-center justify-between p-6 border-b border-ink/10">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-ink/50">
+            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-ink/65">
               Your Archive
             </p>
             <p className="font-display text-2xl">Cart</p>
@@ -33,7 +33,7 @@ export function CartDrawer() {
         {list.length === 0 ? (
           <div className="p-10 text-center">
             <p className="font-display text-2xl">Your archive is empty.</p>
-            <p className="mt-2 font-serif text-ink/60">
+            <p className="mt-2 font-serif text-ink/75">
               Start collecting flavours across India.
             </p>
             <button
@@ -57,7 +57,7 @@ export function CartDrawer() {
                     <p className="font-display text-lg leading-tight">
                       {product.name}
                     </p>
-                    <p className="text-xs text-ink/50 font-mono">
+                    <p className="text-xs text-ink/65 font-mono">
                       {product.region}, {product.state}
                     </p>
                     <div className="mt-2 flex items-center gap-3">
@@ -89,7 +89,7 @@ export function CartDrawer() {
 
             <div className="border-t border-ink/10 p-6">
               <div className="flex justify-between font-mono text-sm mb-4">
-                <span className="uppercase tracking-widest text-ink/60">
+                <span className="uppercase tracking-widest text-ink/75">
                   Subtotal
                 </span>
                 <span className="tabular-nums">₹{totalPrice()}</span>

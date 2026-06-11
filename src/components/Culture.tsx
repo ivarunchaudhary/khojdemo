@@ -14,14 +14,14 @@ export function Culture() {
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-10 py-16 sm:py-20 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-start">
           <Reveal direction="right">
-            <p className="font-mono text-[10px] uppercase tracking-[0.4em] text-ink/50">
+            <p className="font-mono text-[10px] uppercase tracking-[0.4em] text-ink/65">
               § 04 — CULTURE DESK
             </p>
             <h2 className="mt-3 font-display text-4xl sm:text-5xl md:text-6xl text-ink leading-[1.05]">
               A living archive of{" "}
               <span className="font-italic-display text-rust">modern India</span>.
             </h2>
-            <p className="mt-6 text-ink/70 font-serif text-base sm:text-lg max-w-md leading-relaxed">
+            <p className="mt-6 text-ink/85 font-serif text-base sm:text-lg max-w-md leading-relaxed">
               Flavour doesn&rsquo;t travel alone. It comes with mixtapes, train
               windows, half-finished paintings and overheard conversations.
             </p>
@@ -75,7 +75,7 @@ export function Culture() {
               <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/75 to-ink/20" />
 
               <div className="relative p-6 sm:p-8 text-cream min-h-[440px] sm:min-h-[460px] flex flex-col">
-                <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-cream/60">
+                <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-cream/75">
                   {mixtape.eyebrow}
                 </p>
                 <h3 className="mt-2 font-italic-display text-3xl md:text-4xl text-cream">
@@ -92,17 +92,17 @@ export function Culture() {
                       transition={{ delay: 0.3 + i * 0.08, duration: 0.5 }}
                       className="flex items-center gap-3 py-2 border-b border-cream/10 last:border-0"
                     >
-                      <span className="font-mono text-[10px] text-cream/40 w-6">
+                      <span className="font-mono text-[10px] text-cream/55 w-6">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <Play size={12} className="text-ember shrink-0" />
                       <div className="flex-1 min-w-0">
                         <p className="text-sm text-cream truncate">{t.title}</p>
-                        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-cream/50 truncate">
+                        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-cream/65 truncate">
                           {t.artist}
                         </p>
                       </div>
-                      <span className="font-mono text-xs text-cream/60 tabular-nums">
+                      <span className="font-mono text-xs text-cream/75 tabular-nums">
                         {t.time}
                       </span>
                     </motion.div>

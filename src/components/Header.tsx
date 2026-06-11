@@ -36,7 +36,7 @@ export function Header() {
           <span className="font-display text-xl sm:text-2xl text-cream tracking-tight">
             Khoj
           </span>
-          <span className="hidden sm:inline font-mono text-[10px] uppercase tracking-[0.28em] text-cream/55">
+          <span className="hidden sm:inline font-mono text-[10px] uppercase tracking-[0.28em] text-cream/70">
             / India&rsquo;s Taste Archive
           </span>
         </a>
@@ -46,7 +46,7 @@ export function Header() {
             <a
               key={item.label}
               href={item.href}
-              className="underline-grow font-mono text-[11px] uppercase tracking-[0.25em] text-cream/65 hover:text-cream transition-colors"
+              className="underline-grow font-mono text-[11px] uppercase tracking-[0.25em] text-cream/80 hover:text-cream transition-colors"
             >
               {item.label}
             </a>
@@ -97,7 +97,7 @@ export function Header() {
                   key={item.label}
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className="font-mono text-xs uppercase tracking-[0.25em] text-cream/75 hover:text-cream py-2"
+                  className="font-mono text-xs uppercase tracking-[0.25em] text-cream/85 hover:text-cream py-2"
                 >
                   {item.label}
                 </a>

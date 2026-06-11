@@ -48,7 +48,7 @@ export function Archive() {
         <Reveal>
           <div className="grid lg:grid-cols-[1fr_auto] items-end gap-6 mb-8 sm:mb-10">
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.4em] text-ink/50">
+              <p className="font-mono text-[10px] uppercase tracking-[0.4em] text-ink/65">
                 § 02 — THE ARCHIVE
               </p>
               <h2 className="mt-3 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.02] text-ink">
@@ -58,7 +58,7 @@ export function Archive() {
                 one jar at a time.
               </h2>
             </div>
-            <p className="max-w-sm text-ink/70 font-serif text-base leading-snug lg:pb-3">
+            <p className="max-w-sm text-ink/85 font-serif text-base leading-snug lg:pb-3">
               Every Khoj product is a postcard. Sourced from a region, made
               in-house from seed to jar, and indexed in our growing archive of
               flavours that almost slipped through.
@@ -74,7 +74,7 @@ export function Archive() {
               className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-mono text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.25em] border transition-all hover:-translate-y-0.5 ${
                 filter === c
                   ? "bg-wine text-cream border-wine"
-                  : "border-ink/15 text-ink/70 hover:border-ink/40"
+                  : "border-ink/15 text-ink/80 hover:border-ink/40"
               }`}
             >
               {c.toUpperCase()}
@@ -176,11 +176,6 @@ function ProductCard({ product: p, qty, onQty, onAdd, variant = "default" }: Car
         isWide ? "sm:flex-row" : ""
       }`}
     >
-      {p.featured && isFeatured && (
-        <span className="absolute top-3 left-3 z-10 bg-wine text-cream font-mono text-[9px] uppercase tracking-[0.25em] px-2.5 py-1 rounded-sm">
-          HERO DISCOVERY
-        </span>
-      )}
       <div
         className={`relative overflow-hidden bg-sand/40 ${
           isFeatured ? "aspect-[5/4]" : isWide ? "sm:w-1/2 aspect-[5/4] sm:aspect-auto" : "aspect-[5/4]"
@@ -198,9 +193,16 @@ function ProductCard({ product: p, qty, onQty, onAdd, variant = "default" }: Car
           variants={overlayVariants}
           className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/20 to-transparent pointer-events-none"
         />
-        <span className="absolute bottom-3 left-3 z-10 bg-ink/80 text-cream font-mono text-[9px] uppercase tracking-[0.25em] px-2 py-1 rounded-sm">
-          KHOJ&rsquo;ED IN {p.khojedIn.toUpperCase()}.
+        {/* KHOJ'ED IN location tag — always top-left */}
+        <span className="absolute top-3 left-3 z-10 bg-ink/80 text-cream font-mono text-[9px] uppercase tracking-[0.25em] px-2.5 py-1 rounded-sm">
+          KHOJ&rsquo;ED IN {p.khojedIn.toUpperCase()}
         </span>
+        {/* HERO DISCOVERY badge — top-right, featured only */}
+        {p.featured && isFeatured && (
+          <span className="absolute top-3 right-3 z-10 bg-wine text-cream font-mono text-[9px] uppercase tracking-[0.25em] px-2.5 py-1 rounded-sm">
+            HERO DISCOVERY
+          </span>
+        )}
         {/* Blurb — slides up from bottom of image on hover */}
         <motion.p
           variants={blurbVariants}
@@ -210,7 +212,7 @@ function ProductCard({ product: p, qty, onQty, onAdd, variant = "default" }: Car
         </motion.p>
       </div>
       <div className={`p-5 flex flex-col flex-1 ${isWide ? "sm:w-1/2" : ""}`}>
-        <p className="font-mono text-[9px] uppercase tracking-[0.25em] text-ink/55">
+        <p className="font-mono text-[9px] uppercase tracking-[0.25em] text-ink/70">
           {p.category.toUpperCase()} · {p.region.toUpperCase()},{" "}
           {p.state.toUpperCase()}
         </p>
@@ -223,7 +225,7 @@ function ProductCard({ product: p, qty, onQty, onAdd, variant = "default" }: Car
         </h3>
         <div className="mt-5 flex items-end justify-between border-t border-ink/10 pt-4">
           <div>
-            <p className="font-mono text-[9px] uppercase tracking-[0.3em] text-ink/45">
+            <p className="font-mono text-[9px] uppercase tracking-[0.3em] text-ink/60">
               PRICE
             </p>
             <p className="font-display text-xl text-ink mt-0.5">₹{p.price}</p>
@@ -231,7 +233,7 @@ function ProductCard({ product: p, qty, onQty, onAdd, variant = "default" }: Car
           <div className="flex items-center border border-ink/15 rounded-full">
             <button
               onClick={() => onQty(qty - 1)}
-              className="px-2.5 py-1.5 text-ink/70 hover:text-ink"
+              className="px-2.5 py-1.5 text-ink/85 hover:text-ink"
               aria-label="Decrease quantity"
             >
               <Minus size={12} />
@@ -241,7 +243,7 @@ function ProductCard({ product: p, qty, onQty, onAdd, variant = "default" }: Car
             </span>
             <button
               onClick={() => onQty(qty + 1)}
-              className="px-2.5 py-1.5 text-ink/70 hover:text-ink"
+              className="px-2.5 py-1.5 text-ink/85 hover:text-ink"
               aria-label="Increase quantity"
             >
               <Plus size={12} />

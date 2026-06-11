@@ -12,11 +12,11 @@ export function Footer() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10">
             <div className="col-span-2">
               <p className="font-display text-3xl text-cream">Khoj.</p>
-              <p className="mt-4 max-w-sm text-sm text-cream/60 font-serif leading-relaxed">
+              <p className="mt-4 max-w-sm text-sm text-cream/75 font-serif leading-relaxed">
                 India&rsquo;s Taste Archive. A roving archive of disappearing
                 regional flavours, preserved seed-to-jar.
               </p>
-              <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 font-mono text-[10px] uppercase tracking-[0.3em] text-cream/65">
+              <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 font-mono text-[10px] uppercase tracking-[0.3em] text-cream/80">
                 {social.map((s) => (
                   <a
                     key={s}
@@ -30,10 +30,10 @@ export function Footer() {
             </div>
 
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-cream/40">
+              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-cream/55">
                 ARCHIVE
               </p>
-              <ul className="mt-4 space-y-2 text-sm text-cream/70">
+              <ul className="mt-4 space-y-2 text-sm text-cream/85">
                 {archive.map((l) => (
                   <li key={l}>
                     <a href="#archive" className="underline-grow inline-block hover:text-cream transition-colors">
@@ -45,10 +45,10 @@ export function Footer() {
             </div>
 
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-cream/40">
+              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-cream/55">
                 INDEX
               </p>
-              <ul className="mt-4 space-y-2 text-sm text-cream/70">
+              <ul className="mt-4 space-y-2 text-sm text-cream/85">
                 {index.map((l) => (
                   <li key={l}>
                     <a href="#" className="underline-grow inline-block hover:text-cream transition-colors">
@@ -60,7 +60,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="mt-12 sm:mt-14 pt-6 border-t border-cream/10 flex flex-wrap justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-cream/40">
+          <div className="mt-12 sm:mt-14 pt-6 border-t border-cream/10 flex flex-wrap justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-cream/55">
             <span>© 2026 KHOJ. MADE SLOWLY IN INDIA.</span>
             <span>VOL. 01 / FORGOTTEN FLAVOURS</span>
           </div>

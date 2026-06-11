@@ -9,7 +9,7 @@ export function FieldNotes() {
         <Reveal>
           <div className="flex items-end justify-between flex-wrap gap-4 mb-10 sm:mb-12">
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.4em] text-cream/50">
+              <p className="font-mono text-[10px] uppercase tracking-[0.4em] text-cream/65">
                 § 03 — FIELD NOTES
               </p>
               <h2 className="mt-3 font-display text-4xl sm:text-5xl md:text-6xl text-cream leading-[1.05]">
@@ -17,7 +17,7 @@ export function FieldNotes() {
                 <span className="font-italic-display text-ember/90">the road</span>.
               </h2>
             </div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.4em] text-cream/40">
+            <p className="font-mono text-[10px] uppercase tracking-[0.4em] text-cream/55">
               ← SCROLL →
             </p>
           </div>
@@ -40,7 +40,7 @@ export function FieldNotes() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
             <div className="relative h-full min-h-[360px] flex flex-col justify-end p-6">
-              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-cream/70">
+              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-cream/85">
                 {fieldNotesCover.eyebrow}
               </p>
               <h3 className="mt-3 font-italic-display text-3xl text-cream leading-tight">
@@ -61,9 +61,9 @@ export function FieldNotes() {
                 ease: [0.22, 1, 0.36, 1],
               }}
               whileHover={{ y: -4 }}
-              className="snap-start shrink-0 w-[280px] sm:w-[340px] bg-winedeep/40 border border-cream/10 rounded-md p-5 sm:p-6 flex flex-col min-h-[360px]"
+              className="snap-start shrink-0 w-[280px] sm:w-[340px] bg-winedeep/25 border border-cream/15 rounded-md p-5 sm:p-6 flex flex-col min-h-[360px]"
             >
-              <div className="flex justify-between font-mono text-[10px] uppercase tracking-[0.25em] text-cream/50">
+              <div className="flex justify-between font-mono text-[10px] uppercase tracking-[0.25em] text-cream/65">
                 <span>{n.no}</span>
                 <span>{n.place}</span>
               </div>
@@ -73,7 +73,7 @@ export function FieldNotes() {
               <h3 className="mt-2 font-display text-2xl text-cream leading-snug">
                 {n.title}
               </h3>
-              <p className="mt-3 text-cream/65 font-serif text-base leading-relaxed flex-1">
+              <p className="mt-3 text-cream/80 font-serif text-base leading-relaxed flex-1">
                 {n.body}
               </p>
               <motion.a

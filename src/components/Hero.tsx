@@ -32,7 +32,7 @@ export function Hero() {
           {[...ticker, ...ticker, ...ticker].map((t, i) => (
             <span
               key={i}
-              className="px-5 sm:px-6 py-2.5 font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-cream/70 whitespace-nowrap flex items-center gap-5 sm:gap-6"
+              className="px-5 sm:px-6 py-2.5 font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-cream/85 whitespace-nowrap flex items-center gap-5 sm:gap-6"
             >
               {t}
               <span className="text-ember">•</span>
@@ -50,7 +50,7 @@ export function Hero() {
         className="absolute top-1/2 -translate-y-1/2 right-4 sm:right-8 lg:right-12 z-10 hidden sm:block cursor-default"
       >
         <div className="bg-cream/95 text-ink rounded-sm px-6 py-5 w-[220px] sm:w-[260px] shadow-2xl border border-ink/10">
-          <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.3em] text-ink/55">
+          <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.3em] text-ink/70">
             <span>FIELD STAMP</span>
             <span>№ 047</span>
           </div>
@@ -59,7 +59,7 @@ export function Hero() {
             <br />
             Himachal Pradesh
           </p>
-          <p className="mt-4 pt-3 border-t border-ink/10 font-mono text-[10px] text-ink/50 tracking-wider">
+          <p className="mt-4 pt-3 border-t border-ink/10 font-mono text-[10px] text-ink/65 tracking-wider">
             32.55°N &nbsp;·&nbsp; 76.12°E
           </p>
         </div>
@@ -72,7 +72,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="font-mono text-[10px] uppercase tracking-[0.4em] text-cream/65 mb-5 sm:mb-6"
+            className="font-mono text-[10px] uppercase tracking-[0.4em] text-cream/80 mb-5 sm:mb-6"
           >
             § 01 &nbsp;·&nbsp; DISCOVERING INDIA
           </motion.p>
@@ -92,7 +92,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.7 }}
-            className="mt-6 sm:mt-7 max-w-lg text-cream/80 font-serif text-base sm:text-lg leading-snug"
+            className="mt-6 sm:mt-7 max-w-lg text-cream/90 font-serif text-base sm:text-lg leading-snug"
           >
             Khoj is a roving archive of disappearing regional flavours,
             kitchen rituals and small-town stories — collected jar by jar,
