@@ -1,8 +1,28 @@
 import { useMemo, useState } from "react";
 import { Minus, Plus } from "lucide-react";
+import { motion, type Variants } from "motion/react";
 import { products, categories, type Product } from "../data/products";
 import { useCart } from "../store/cart";
 import { Reveal } from "./Reveal";
+
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
+const overlayVariants: Variants = {
+  rest: { opacity: 0 },
+  hover: { opacity: 1, transition: { duration: 0.5 } },
+};
+const blurbVariants: Variants = {
+  rest: { opacity: 0, y: 12 },
+  hover: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+const imageVariants: Variants = {
+  rest: { scale: 1 },
+  hover: { scale: 1.05, transition: { duration: 1.2, ease: EASE } },
+};
+const arrowVariants: Variants = {
+  rest: { x: 0 },
+  hover: { x: 4, transition: { duration: 0.3 } },
+};
 
 export function Archive() {
   const [filter, setFilter] = useState<(typeof categories)[number]>("All");
@@ -147,8 +167,12 @@ function ProductCard({ product: p, qty, onQty, onAdd, variant = "default" }: Car
   const isWide = variant === "wide";
 
   return (
-    <article
-      className={`group relative bg-bone/85 border border-ink/10 rounded-md overflow-hidden flex flex-col shadow-sm h-full hover:-translate-y-1 transition-transform duration-300 ${
+    <motion.article
+      initial="rest"
+      animate="rest"
+      whileHover="hover"
+      variants={{ rest: { y: 0 }, hover: { y: -4, transition: { duration: 0.3, ease: EASE } } }}
+      className={`relative bg-bone/85 border border-ink/10 rounded-md overflow-hidden flex flex-col shadow-sm h-full ${
         isWide ? "sm:flex-row" : ""
       }`}
     >
@@ -162,15 +186,28 @@ function ProductCard({ product: p, qty, onQty, onAdd, variant = "default" }: Car
           isFeatured ? "aspect-[5/4]" : isWide ? "sm:w-1/2 aspect-[5/4] sm:aspect-auto" : "aspect-[5/4]"
         }`}
       >
-        <img
+        <motion.img
           src={p.image}
           alt={p.name}
           loading="lazy"
-          className="w-full h-full object-cover group-hover:scale-[1.06] transition-transform duration-700 ease-out"
+          variants={imageVariants}
+          className="w-full h-full object-cover"
         />
-        <span className="absolute bottom-3 left-3 bg-ink/80 text-cream font-mono text-[9px] uppercase tracking-[0.25em] px-2 py-1 rounded-sm">
+        {/* Dark gradient overlay — fades in on card hover */}
+        <motion.div
+          variants={overlayVariants}
+          className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/20 to-transparent pointer-events-none"
+        />
+        <span className="absolute bottom-3 left-3 z-10 bg-ink/80 text-cream font-mono text-[9px] uppercase tracking-[0.25em] px-2 py-1 rounded-sm">
           KHOJ&rsquo;ED IN {p.khojedIn.toUpperCase()}.
         </span>
+        {/* Blurb — slides up from bottom of image on hover */}
+        <motion.p
+          variants={blurbVariants}
+          className="pointer-events-none absolute inset-x-4 bottom-10 z-10 text-sm leading-relaxed text-cream"
+        >
+          {p.blurb}
+        </motion.p>
       </div>
       <div className={`p-5 flex flex-col flex-1 ${isWide ? "sm:w-1/2" : ""}`}>
         <p className="font-mono text-[9px] uppercase tracking-[0.25em] text-ink/55">
@@ -184,9 +221,6 @@ function ProductCard({ product: p, qty, onQty, onAdd, variant = "default" }: Car
         >
           {p.name}
         </h3>
-        <p className="mt-3 text-sm text-ink/70 leading-relaxed flex-1">
-          {p.blurb}
-        </p>
         <div className="mt-5 flex items-end justify-between border-t border-ink/10 pt-4">
           <div>
             <p className="font-mono text-[9px] uppercase tracking-[0.3em] text-ink/45">
@@ -214,13 +248,18 @@ function ProductCard({ product: p, qty, onQty, onAdd, variant = "default" }: Car
             </button>
           </div>
         </div>
-        <button
+        <motion.button
           onClick={onAdd}
-          className="mt-4 w-full bg-wine text-cream font-mono text-[10px] uppercase tracking-[0.25em] rounded-full px-4 py-2.5 hover:bg-winedeep transition-all hover:-translate-y-0.5"
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.97 }}
+          className="mt-4 w-full bg-wine text-cream font-mono text-[10px] uppercase tracking-[0.25em] rounded-full px-4 py-2.5 hover:bg-winedeep transition-colors flex items-center justify-center gap-1.5"
         >
-          ADD TO CART →
-        </button>
+          ADD TO CART{" "}
+          <motion.span variants={arrowVariants} className="inline-block">
+            →
+          </motion.span>
+        </motion.button>
       </div>
-    </article>
+    </motion.article>
   );
 }
