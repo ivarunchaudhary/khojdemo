@@ -30,8 +30,11 @@ export function Culture() {
               {channels.map((c) => (
                 <motion.button
                   key={c}
-                  whileHover={{ y: -2 }}
+                  initial="rest"
+                  animate="rest"
+                  whileHover="hover"
                   whileTap={{ scale: 0.98 }}
+                  variants={{ rest: { y: 0 }, hover: { y: -2 } }}
                   onClick={() => setChannel(c)}
                   className={`flex flex-col items-start text-left rounded-md border px-3 sm:px-4 py-2.5 sm:py-3 transition-colors ${
                     channel === c
@@ -46,9 +49,16 @@ export function Culture() {
                   >
                     CHANNEL
                   </span>
-                  <span className="font-display text-base sm:text-lg leading-tight mt-0.5">
+                  <motion.span
+                    variants={
+                      channel === c
+                        ? undefined
+                        : { rest: { color: "#1a0d0a" }, hover: { color: "#5a1d1d" } }
+                    }
+                    className="font-display text-base sm:text-lg leading-tight mt-0.5"
+                  >
                     {c}
-                  </span>
+                  </motion.span>
                 </motion.button>
               ))}
             </div>
