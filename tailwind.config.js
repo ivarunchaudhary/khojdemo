@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: "#1a0d0a",
-        wine: "#5a1d1d",
-        winedeep: "#3a0f0f",
+        ink: "#16100e",
+        wine: "#7c1b29",
+        winedeep: "#5e1521",
         cream: "#f4ead8",
         parchment: "#ece1cb",
         sand: "#d9c8a8",

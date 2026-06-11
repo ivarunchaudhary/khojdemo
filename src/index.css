@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body,
 #root {
@@ -12,6 +16,17 @@ body,
   font-family: "Inter", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   margin: 0;
+}
+
+/* Offset anchor targets so they don't land hidden under the fixed header */
+section[id] {
+  scroll-margin-top: 4.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 * {
