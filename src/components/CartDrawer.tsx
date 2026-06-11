@@ -58,7 +58,7 @@ export function CartDrawer() {
                       {product.name}
                     </p>
                     <p className="text-xs text-ink/50 font-mono">
-                      {product.origin}
+                      {product.region}, {product.state}
                     </p>
                     <div className="mt-2 flex items-center gap-3">
                       <div className="flex items-center border border-ink/15 rounded-full">
