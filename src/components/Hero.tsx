@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { ChambaStory } from "./ChambaStory";
 
@@ -11,11 +11,33 @@ const ticker = [
 ];
 
 export function Hero() {
-  const [chambaOpen, setChambaOpen] = useState(false);
+  const [chambaOpen, setChambaOpen] = useState(
+    () => window.location.pathname === "/story/chamba"
+  );
+
+  function openStory() {
+    window.history.pushState({ chamba: true }, "", "/story/chamba");
+    setChambaOpen(true);
+  }
+
+  function closeStory() {
+    if (window.location.pathname === "/story/chamba") {
+      window.history.pushState({}, "", "/");
+    }
+    setChambaOpen(false);
+  }
+
+  useEffect(() => {
+    function onPop() {
+      setChambaOpen(window.location.pathname === "/story/chamba");
+    }
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
 
   return (
     <>
-      <ChambaStory open={chambaOpen} onClose={() => setChambaOpen(false)} />
+      <ChambaStory open={chambaOpen} onClose={closeStory} />
 
       <section
         id="top"
@@ -54,7 +76,7 @@ export function Hero() {
           animate={{ opacity: 1, x: 0, rotate: 1.5 }}
           whileHover={{ rotate: 0, y: -6, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } }}
           transition={{ delay: 0.9, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          onClick={() => setChambaOpen(true)}
+          onClick={openStory}
           className="absolute top-1/2 -translate-y-1/2 right-4 sm:right-8 lg:right-12 z-10 hidden sm:block cursor-pointer group"
           aria-label="Open Chamba story"
         >

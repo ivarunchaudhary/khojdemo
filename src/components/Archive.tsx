@@ -194,12 +194,12 @@ function ProductCard({ product: p, qty, onQty, onAdd, variant = "default" }: Car
           className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/20 to-transparent pointer-events-none"
         />
         {/* KHOJ'ED IN location tag — always top-left */}
-        <span className="absolute top-3 left-3 z-10 bg-ink/80 text-cream font-mono text-[9px] uppercase tracking-[0.25em] px-2.5 py-1 rounded-sm">
+        <span className="absolute top-3 left-3 z-10 bg-cream/90 text-ink font-mono text-[9px] uppercase tracking-[0.25em] px-3 py-1 rounded-full shadow-sm">
           KHOJ&rsquo;ED IN {p.khojedIn.toUpperCase()}
         </span>
         {/* HERO DISCOVERY badge — top-right, featured only */}
         {p.featured && isFeatured && (
-          <span className="absolute top-3 right-3 z-10 bg-wine text-cream font-mono text-[9px] uppercase tracking-[0.25em] px-2.5 py-1 rounded-sm">
+          <span className="absolute top-3 right-3 z-10 bg-ember text-ink font-mono text-[9px] uppercase tracking-[0.25em] px-3 py-1 rounded-full shadow-sm">
             HERO DISCOVERY
           </span>
         )}

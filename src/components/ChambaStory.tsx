@@ -17,7 +17,7 @@ const slides = [
     title: "Before the roads widened.",
     body: "A hill town in the Ravi valley, so steep the postman walks. We arrived in October by local bus — the same way most people arrive, if they arrive at all. Every balcony in Chamba was hung with green chillies drying in the last of the mountain sun. The air carried pine, wood smoke, and something old and quietly fermenting.",
     image:
-      "https://images.unsplash.com/photo-1599059813005-11265ba4b4ce?auto=format&fit=crop&w=1600&q=85",
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=85",
     imgFit: "object-cover",
     imgPosition: "object-center",
   },
@@ -28,7 +28,7 @@ const slides = [
     title: "Every balcony, a different recipe.",
     body: "The Pahadi green chilli is not what you expect. Grown above two thousand metres, it develops differently from lowland varieties — less fierce, more grassy, with a slow heat that builds like a conversation. Every family in Chamba pounds their own chukh. No two are the same. No recipe has ever been written down.",
     image:
-      "https://images.unsplash.com/photo-1586348943529-beaae6c28db9?auto=format&fit=crop&w=1600&q=85",
+      "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1600&q=85",
     imgFit: "object-cover",
     imgPosition: "object-center",
   },
@@ -39,7 +39,7 @@ const slides = [
     title: "Three kitchens, one ratio.",
     body: "The method is old. Pound the chillies slow in stone — not ground, not blended. Salt at intervals to draw the juice. Raw mustard oil at the finish, sharp and grassy. A whisper of asafoetida. The ratio lives in the hands, not a recipe card. We spent three days in a stone-walled kitchen at 2,100 metres, learning the rhythm between songs.",
     image:
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1600&q=85",
+      "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=1600&q=85",
     imgFit: "object-cover",
     imgPosition: "object-center",
   },
@@ -92,18 +92,28 @@ export function ChambaStory({ open, onClose }: Props) {
           transition={{ duration: 0.45 }}
           className="fixed inset-0 z-[60] bg-ink flex overflow-hidden"
         >
-          {/* Close */}
-          <button
-            onClick={onClose}
-            className="absolute top-5 right-5 z-20 text-cream/65 hover:text-cream transition-colors p-2 rounded-full border border-cream/15 hover:border-cream/35"
-            aria-label="Close story"
-          >
-            <X size={16} />
-          </button>
+          {/* Top bar */}
+          <div className="absolute top-0 inset-x-0 z-20 flex items-center justify-between px-6 py-5">
+            <button
+              onClick={onClose}
+              className="flex items-center gap-2 text-cream/55 hover:text-cream transition-colors group"
+              aria-label="Back to home"
+            >
+              <ChevronLeft size={14} className="group-hover:-translate-x-0.5 transition-transform" />
+              <span className="font-mono text-[9px] uppercase tracking-[0.35em]">Back</span>
+            </button>
 
-          {/* Top label */}
-          <div className="absolute top-6 left-6 z-20 font-mono text-[10px] uppercase tracking-[0.4em] text-cream/50">
-            KHOJ FIELD DISPATCH · {s.no} / {slides.length}
+            <span className="font-mono text-[9px] uppercase tracking-[0.4em] text-cream/45">
+              KHOJ FIELD DISPATCH · {s.no} / {slides.length}
+            </span>
+
+            <button
+              onClick={onClose}
+              className="text-cream/55 hover:text-cream transition-colors p-1.5 rounded-full border border-cream/15 hover:border-cream/35"
+              aria-label="Close story"
+            >
+              <X size={14} />
+            </button>
           </div>
 
           {/* Left — story text */}
