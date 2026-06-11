@@ -61,8 +61,7 @@ export const products: Product[] = [
     blurb:
       "A green herbed salt blend from old North-Indian kitchens. Mint, coriander, rock salt — for everything you cook from scratch.",
     price: 129,
-    image:
-      "https://images.unsplash.com/photo-1757802261994-3c31584daafd?auto=format&fit=crop&w=1200&q=80",
+    image: "/img/haara-namak.png",
   },
 ];
 
