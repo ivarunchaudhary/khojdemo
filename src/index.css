@@ -23,6 +23,26 @@ body,
   font-style: italic;
 }
 
+/* Animated underline that grows from the left on hover (matches original nav links) */
+.underline-grow {
+  position: relative;
+}
+.underline-grow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 1px;
+  width: 100%;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.underline-grow:hover::after {
+  transform: scaleX(1);
+}
+
 .paper {
   background-color: #f4ead8;
   background-image: radial-gradient(

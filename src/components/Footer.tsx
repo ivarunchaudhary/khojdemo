@@ -36,7 +36,7 @@ export function Footer() {
               <ul className="mt-4 space-y-2 text-sm text-cream/70">
                 {archive.map((l) => (
                   <li key={l}>
-                    <a href="#archive" className="hover:text-cream transition-colors">
+                    <a href="#archive" className="underline-grow inline-block hover:text-cream transition-colors">
                       {l}
                     </a>
                   </li>
@@ -51,7 +51,7 @@ export function Footer() {
               <ul className="mt-4 space-y-2 text-sm text-cream/70">
                 {index.map((l) => (
                   <li key={l}>
-                    <a href="#" className="hover:text-cream transition-colors">
+                    <a href="#" className="underline-grow inline-block hover:text-cream transition-colors">
                       {l}
                     </a>
                   </li>

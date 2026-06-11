@@ -46,7 +46,7 @@ export function Header() {
             <a
               key={item.label}
               href={item.href}
-              className="font-mono text-[11px] uppercase tracking-[0.25em] text-cream/65 hover:text-cream transition-colors"
+              className="underline-grow font-mono text-[11px] uppercase tracking-[0.25em] text-cream/65 hover:text-cream transition-colors"
             >
               {item.label}
             </a>
