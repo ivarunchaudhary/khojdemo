@@ -76,12 +76,21 @@ export function FieldNotes() {
               <p className="mt-3 text-cream/65 font-serif text-base leading-relaxed flex-1">
                 {n.body}
               </p>
-              <a
-                className="mt-6 font-mono text-[10px] uppercase tracking-[0.3em] text-ember hover:text-cream transition-colors self-start"
+              <motion.a
+                initial="rest"
+                animate="rest"
+                whileHover="hover"
+                className="mt-6 inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.3em] text-ember hover:text-cream transition-colors self-start"
                 href="#"
               >
-                READ ENTRY →
-              </a>
+                READ ENTRY{" "}
+                <motion.span
+                  variants={{ rest: { x: 0 }, hover: { x: 4, transition: { duration: 0.3 } } }}
+                  className="inline-block"
+                >
+                  →
+                </motion.span>
+              </motion.a>
             </motion.article>
           ))}
         </div>
