@@ -169,17 +169,22 @@ export function Hero() {
               </motion.a>
             </motion.div>
 
-            {/* Mobile-only Chamba story link — stamp is hidden on small screens */}
+            {/* Mobile-only Chamba story link — mini stamp, in flow so it never overlaps */}
             <motion.button
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.1, duration: 0.6 }}
               onClick={openStory}
-              className="sm:hidden mt-5 flex items-center gap-2 font-mono text-[9px] uppercase tracking-[0.35em] text-cream/60 hover:text-cream transition-colors"
+              className="sm:hidden mt-5 flex items-center gap-4 text-left"
+              aria-label="Open Chamba story"
             >
-              <span className="w-5 h-px bg-cream/40" />
-              READ THE CHAMBA STORY
-              <span className="w-5 h-px bg-cream/40" />
+              <span className="block w-16 shrink-0">
+                <ChambaStamp />
+              </span>
+              <span className="flex items-center gap-2 font-mono text-[9px] uppercase tracking-[0.35em] text-cream/60">
+                READ THE CHAMBA STORY
+                <span className="text-ember">→</span>
+              </span>
             </motion.button>
           </div>
         </div>

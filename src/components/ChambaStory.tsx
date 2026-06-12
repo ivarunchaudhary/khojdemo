@@ -99,34 +99,54 @@ export function ChambaStory({ open, onClose }: Props) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.45 }}
-          className="fixed inset-0 z-[60] bg-ink flex overflow-hidden"
+          className="fixed inset-0 z-[60] bg-ink flex flex-col lg:flex-row overflow-y-auto lg:overflow-hidden"
         >
           {/* Top bar */}
-          <div className="absolute top-0 inset-x-0 z-20 flex items-center justify-between px-6 py-5">
+          <div className="fixed top-0 inset-x-0 z-[70] flex items-center justify-between px-5 sm:px-6 py-4 sm:py-5">
             <button
               onClick={handleClose}
-              className="flex items-center gap-2 text-cream/55 hover:text-cream transition-colors group"
+              className="flex items-center gap-1.5 sm:gap-2 text-cream/75 lg:text-cream/55 hover:text-cream transition-colors group"
               aria-label="Back to home"
             >
               <ChevronLeft size={14} className="group-hover:-translate-x-0.5 transition-transform" />
-              <span className="font-mono text-[9px] uppercase tracking-[0.35em]">Back</span>
+              <span className="font-mono text-[9px] uppercase tracking-[0.3em] sm:tracking-[0.35em]">Back</span>
             </button>
 
-            <span className="font-mono text-[9px] uppercase tracking-[0.4em] text-cream/45">
-              KHOJ FIELD DISPATCH · {s.no} / {slides.length}
+            <span className="font-mono text-[9px] uppercase tracking-[0.3em] sm:tracking-[0.4em] text-cream/60 lg:text-cream/45">
+              <span className="hidden sm:inline">KHOJ FIELD DISPATCH · </span>
+              {s.no} / {slides.length}
             </span>
 
             <button
               onClick={handleClose}
-              className="text-cream/55 hover:text-cream transition-colors p-1.5 rounded-full border border-cream/15 hover:border-cream/35"
+              className="text-cream/75 lg:text-cream/55 hover:text-cream transition-colors p-1.5 rounded-full border border-cream/15 hover:border-cream/35 bg-ink/30 lg:bg-transparent"
               aria-label="Close story"
             >
               <X size={14} />
             </button>
           </div>
 
-          {/* Left — story text */}
-          <div className="relative z-10 flex flex-col justify-center w-full lg:w-[52%] px-8 sm:px-14 lg:px-20 pt-24 pb-14">
+          {/* Mobile — image banner at top */}
+          <div className="lg:hidden relative h-[38vh] min-h-[240px] shrink-0 overflow-hidden">
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={slide + "-mob"}
+                initial={{ opacity: 0, scale: 1.05 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.6, ease: EASE }}
+                src={s.image}
+                alt={s.label}
+                className={`w-full h-full ${s.imgFit} ${s.imgPosition} ${
+                  s.imgFit === "object-contain" ? "p-10 pt-16" : ""
+                }`}
+              />
+            </AnimatePresence>
+            <div className="absolute inset-0 bg-gradient-to-b from-ink/55 via-transparent to-ink" />
+          </div>
+
+          {/* Story text */}
+          <div className="relative z-10 flex flex-col lg:justify-center w-full lg:w-[52%] px-7 sm:px-14 lg:px-20 pt-6 pb-12 lg:pt-24 lg:pb-14 flex-1">
             <AnimatePresence mode="wait">
               <motion.div
                 key={slide}
@@ -224,23 +244,6 @@ export function ChambaStory({ open, onClose }: Props) {
                 </div>
               </motion.div>
             </AnimatePresence>
-          </div>
-
-          {/* Mobile — image strip at bottom */}
-          <div className="absolute inset-x-0 bottom-0 h-44 lg:hidden overflow-hidden pointer-events-none">
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={slide + "-mob"}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
-                src={s.image}
-                alt={s.label}
-                className={`w-full h-full ${s.imgFit} ${s.imgPosition}`}
-              />
-            </AnimatePresence>
-            <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-transparent" />
           </div>
         </motion.div>
       )}
