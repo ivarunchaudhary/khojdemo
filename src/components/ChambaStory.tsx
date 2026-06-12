@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -59,26 +59,35 @@ export function ChambaStory({ open, onClose }: Props) {
   const [slide, setSlide] = useState(0);
   const [dir, setDir] = useState(1);
 
-  useEffect(() => {
-    if (!open) {
+  const navigate = useCallback(
+    (d: number) => {
+      const next = slide + d;
+      if (next < 0 || next >= slides.length) return;
+      setDir(d);
+      setSlide(next);
+    },
+    [slide],
+  );
+
+  const handleClose = useCallback(() => {
+    onClose();
+    // reset after the 0.45s exit fade so the first slide doesn't flash in
+    window.setTimeout(() => {
       setSlide(0);
-      return;
-    }
+      setDir(1);
+    }, 500);
+  }, [onClose]);
+
+  useEffect(() => {
+    if (!open) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") handleClose();
       if (e.key === "ArrowRight") navigate(1);
       if (e.key === "ArrowLeft") navigate(-1);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [open, slide]);
-
-  function navigate(d: number) {
-    const next = slide + d;
-    if (next < 0 || next >= slides.length) return;
-    setDir(d);
-    setSlide(next);
-  }
+  }, [open, navigate, handleClose]);
 
   const s = slides[slide];
 
@@ -95,7 +104,7 @@ export function ChambaStory({ open, onClose }: Props) {
           {/* Top bar */}
           <div className="absolute top-0 inset-x-0 z-20 flex items-center justify-between px-6 py-5">
             <button
-              onClick={onClose}
+              onClick={handleClose}
               className="flex items-center gap-2 text-cream/55 hover:text-cream transition-colors group"
               aria-label="Back to home"
             >
@@ -108,7 +117,7 @@ export function ChambaStory({ open, onClose }: Props) {
             </span>
 
             <button
-              onClick={onClose}
+              onClick={handleClose}
               className="text-cream/55 hover:text-cream transition-colors p-1.5 rounded-full border border-cream/15 hover:border-cream/35"
               aria-label="Close story"
             >
@@ -182,7 +191,7 @@ export function ChambaStory({ open, onClose }: Props) {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3, duration: 0.4 }}
                   href="#archive"
-                  onClick={onClose}
+                  onClick={handleClose}
                   className="ml-3 font-mono text-[10px] uppercase tracking-[0.25em] text-ember hover:text-cream transition-colors"
                 >
                   Shop the Jar →

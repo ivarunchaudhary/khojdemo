@@ -1,8 +1,15 @@
+import { useRef } from "react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import { fieldNotes, fieldNotesCover } from "../data/notes";
 import { Reveal } from "./Reveal";
 
 export function FieldNotes() {
+  const scroller = useRef<HTMLDivElement>(null);
+
+  const scrollByCard = (dir: 1 | -1) =>
+    scroller.current?.scrollBy({ left: dir * 360, behavior: "smooth" });
+
   return (
     <section id="field-notes" className="bg-ink relative py-16 sm:py-20 lg:py-24 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
@@ -17,13 +24,29 @@ export function FieldNotes() {
                 <span className="font-italic-display text-ember/90">the road</span>.
               </h2>
             </div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.4em] text-cream/55">
-              ← SCROLL →
-            </p>
+            <div className="hidden sm:flex items-center gap-2">
+              <button
+                onClick={() => scrollByCard(-1)}
+                aria-label="Scroll field notes left"
+                className="border border-cream/20 rounded-full p-2.5 text-cream/70 hover:text-cream hover:border-cream/50 transition-colors"
+              >
+                <ArrowLeft size={14} />
+              </button>
+              <button
+                onClick={() => scrollByCard(1)}
+                aria-label="Scroll field notes right"
+                className="border border-cream/20 rounded-full p-2.5 text-cream/70 hover:text-cream hover:border-cream/50 transition-colors"
+              >
+                <ArrowRight size={14} />
+              </button>
+            </div>
           </div>
         </Reveal>
 
-        <div className="flex gap-4 sm:gap-5 overflow-x-auto pb-6 -mx-6 px-6 lg:-mx-10 lg:px-10 no-scrollbar snap-x snap-mandatory">
+        <div
+          ref={scroller}
+          className="flex gap-4 sm:gap-5 overflow-x-auto pb-6 -mx-6 px-6 lg:-mx-10 lg:px-10 no-scrollbar snap-x snap-mandatory"
+        >
           <motion.article
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -81,9 +104,9 @@ export function FieldNotes() {
                 animate="rest"
                 whileHover="hover"
                 className="mt-6 inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.3em] text-ember hover:text-cream transition-colors self-start"
-                href="#"
+                href={n.href}
               >
-                READ ENTRY{" "}
+                {n.cta.replace(" →", "")}{" "}
                 <motion.span
                   variants={{ rest: { x: 0 }, hover: { x: 4, transition: { duration: 0.3 } } }}
                   className="inline-block"
