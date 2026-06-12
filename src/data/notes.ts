@@ -4,6 +4,8 @@ export type FieldNote = {
   type: "FIELD RECIPE" | "RITUAL" | "MEMORY" | "INGREDIENT" | "PLAYLIST";
   title: string;
   body: string;
+  cta: string;
+  href: string;
 };
 
 export const fieldNotes: FieldNote[] = [
@@ -13,6 +15,8 @@ export const fieldNotes: FieldNote[] = [
     type: "FIELD RECIPE",
     title: "Notes on a green chilli",
     body: "Three days in a stone-walled kitchen, learning the chukh between songs.",
+    cta: "SHOP CHAMBA CHUKH →",
+    href: "#archive",
   },
   {
     no: "№ 018",
@@ -20,6 +24,8 @@ export const fieldNotes: FieldNote[] = [
     type: "RITUAL",
     title: "Sattu before the heat",
     body: "A grandmother's measuring cup is a fist. Her ratios never lie.",
+    cta: "SHOP SATTU LADDOO →",
+    href: "#archive",
   },
   {
     no: "№ 023",
@@ -27,6 +33,8 @@ export const fieldNotes: FieldNote[] = [
     type: "MEMORY",
     title: "June, bottled.",
     body: "Black salt, plum, and the loud quiet of a verandah at three in the afternoon.",
+    cta: "SHOP THE SHERBET →",
+    href: "#archive",
   },
   {
     no: "№ 031",
@@ -34,6 +42,8 @@ export const fieldNotes: FieldNote[] = [
     type: "INGREDIENT",
     title: "Green salt, plain truth.",
     body: "Sometimes the most radical thing in a kitchen is the salt.",
+    cta: "SHOP HAARA NAMAK →",
+    href: "#archive",
   },
   {
     no: "№ 037",
@@ -41,6 +51,8 @@ export const fieldNotes: FieldNote[] = [
     type: "PLAYLIST",
     title: "Playlist: Highway 1A",
     body: "Lo-fi qawwalis, dadra, and the hiss of cassette tape.",
+    cta: "HEAR THE PLAYLIST →",
+    href: "#culture",
   },
 ];
 

@@ -10,6 +10,7 @@ type CartState = {
   close: () => void;
   add: (product: Product, qty?: number) => void;
   remove: (id: string) => void;
+  clear: () => void;
   setQty: (id: string, qty: number) => void;
   totalCount: () => number;
   totalPrice: () => number;
@@ -39,6 +40,7 @@ export const useCart = create<CartState>((set, get) => ({
       delete next[id];
       return { items: next };
     }),
+  clear: () => set({ items: {} }),
   setQty: (id, qty) =>
     set((state) => {
       if (qty <= 0) {
