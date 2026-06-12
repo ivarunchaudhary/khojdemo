@@ -97,3 +97,193 @@ section[id] {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* ============================================================
+   Chamba animated stamp (Hero field stamp)
+   Artwork palette is intentionally local to the illustration —
+   these are not UI tokens.
+   ============================================================ */
+.chamba-stamp {
+  --stamp-paper: #f4ebd6;
+  --stamp-madder: #a93226;
+  --stamp-ochre: #d9a441;
+  --stamp-indigo: #2c3e63;
+  --stamp-deodar: #2f5c47;
+  --stamp-sky-a: #bfd7e4;
+  --stamp-sky-b: #ead9b8;
+  --stamp-ink: #3a2c20;
+  aspect-ratio: 4 / 5;
+  position: relative;
+  animation:
+    stamp-in 0.9s cubic-bezier(0.2, 1.4, 0.3, 1) 0.9s both,
+    stamp-float 7s ease-in-out 2.2s infinite;
+  filter: drop-shadow(0 10px 24px rgba(58, 44, 32, 0.28));
+}
+.chamba-stamp svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+@keyframes stamp-in {
+  0% {
+    transform: scale(1.5) rotate(-8deg);
+    opacity: 0;
+  }
+  55% {
+    transform: scale(0.96) rotate(2deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+@keyframes stamp-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(-0.6deg);
+  }
+}
+
+/* ---------- scene motion ---------- */
+.chamba-stamp .sunrays {
+  transform-origin: 300px 188px;
+  animation: stamp-spin 40s linear infinite;
+}
+@keyframes stamp-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.chamba-stamp .cloud-1 {
+  animation: stamp-drift1 26s linear infinite;
+}
+.chamba-stamp .cloud-2 {
+  animation: stamp-drift2 34s linear infinite;
+}
+@keyframes stamp-drift1 {
+  from {
+    transform: translateX(-140px);
+  }
+  to {
+    transform: translateX(520px);
+  }
+}
+@keyframes stamp-drift2 {
+  from {
+    transform: translateX(540px);
+  }
+  to {
+    transform: translateX(-180px);
+  }
+}
+
+.chamba-stamp .river-flow {
+  stroke-dasharray: 14 22;
+  animation: stamp-flow 2.6s linear infinite;
+}
+@keyframes stamp-flow {
+  to {
+    stroke-dashoffset: -72;
+  }
+}
+
+.chamba-stamp .flag {
+  transform-origin: 300px 196px;
+  animation: stamp-flutter 1.6s ease-in-out infinite;
+}
+@keyframes stamp-flutter {
+  0%,
+  100% {
+    transform: skewX(0deg);
+  }
+  50% {
+    transform: skewX(-14deg);
+  }
+}
+
+.chamba-stamp .bird {
+  animation: stamp-fly 14s linear infinite;
+}
+.chamba-stamp .bird.b2 {
+  animation-delay: -7s;
+}
+@keyframes stamp-fly {
+  0% {
+    transform: translate(-60px, 40px);
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(560px, -30px);
+    opacity: 0;
+  }
+}
+.chamba-stamp .wingbeat {
+  animation: stamp-beat 0.5s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+@keyframes stamp-beat {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0.35);
+  }
+}
+
+.chamba-stamp .shimmer {
+  animation: stamp-shimmer 3.5s ease-in-out infinite;
+}
+@keyframes stamp-shimmer {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* postmark sweeps in after the stamp lands */
+.chamba-stamp .postmark {
+  transform-origin: 140px 552px;
+  animation: stamp-mark 0.5s ease-out 1.95s both;
+  opacity: 0.85;
+}
+@keyframes stamp-mark {
+  from {
+    transform: scale(2.2) rotate(-20deg);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) rotate(-12deg);
+    opacity: 0.85;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chamba-stamp,
+  .chamba-stamp .sunrays,
+  .chamba-stamp .cloud-1,
+  .chamba-stamp .cloud-2,
+  .chamba-stamp .river-flow,
+  .chamba-stamp .flag,
+  .chamba-stamp .bird,
+  .chamba-stamp .wingbeat,
+  .chamba-stamp .shimmer,
+  .chamba-stamp .postmark {
+    animation: none !important;
+  }
+  .chamba-stamp .postmark {
+    transform: rotate(-12deg);
+  }
+}

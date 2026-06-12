@@ -79,7 +79,7 @@ export function Culture() {
     <section id="culture" className="paper grain relative">
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-10 py-16 sm:py-20 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-start">
-          <Reveal direction="right">
+          <Reveal direction="right" className="min-w-0">
             <p className="font-mono text-[10px] uppercase tracking-[0.4em] text-ink/65">
               § 04 — CULTURE DESK
             </p>
@@ -130,7 +130,7 @@ export function Culture() {
             </div>
           </Reveal>
 
-          <Reveal direction="left" delay={0.15}>
+          <Reveal direction="left" delay={0.15} className="min-w-0">
             <AnimatePresence mode="wait">
               {channel === "Mixtapes" && (
                 <motion.div

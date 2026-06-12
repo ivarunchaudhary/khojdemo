@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { ChambaStory } from "./ChambaStory";
+import { ChambaStamp } from "./ChambaStamp";
 
 const ticker = [
   "KHOJ'ED IN CHAMBA",
@@ -71,34 +72,16 @@ export function Hero() {
         </div>
 
         {/* Field stamp — clickable, opens Chamba story */}
-        <motion.button
-          initial={{ opacity: 0, x: 30, rotate: 1.5 }}
-          animate={{ opacity: 1, x: 0, rotate: 1.5 }}
-          whileHover={{ rotate: 0, y: -6, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } }}
-          transition={{ delay: 0.9, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        <button
           onClick={openStory}
-          className="absolute top-1/2 -translate-y-1/2 right-4 sm:right-8 lg:right-12 z-10 hidden sm:block cursor-pointer group"
+          className="absolute top-1/2 translate-y-[calc(-50%+28px)] hover:translate-y-[calc(-50%+20px)] transition-transform duration-300 ease-out right-4 sm:right-8 lg:right-12 z-10 hidden sm:block w-[200px] lg:w-[230px] cursor-pointer group"
           aria-label="Open Chamba story"
         >
-          <div className="bg-cream/95 text-ink rounded-sm px-6 py-5 w-[220px] sm:w-[260px] shadow-2xl border border-ink/10 group-hover:shadow-ember/10 group-hover:border-ink/20 transition-all duration-300">
-            <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.3em] text-ink/70">
-              <span>FIELD STAMP</span>
-              <span>№ 047</span>
-            </div>
-            <p className="mt-4 font-italic-display text-2xl sm:text-[1.7rem] leading-[1.15] text-ink">
-              Chamba,
-              <br />
-              Himachal Pradesh
-            </p>
-            <p className="mt-4 pt-3 border-t border-ink/10 font-mono text-[10px] text-ink/65 tracking-wider">
-              32.55°N &nbsp;·&nbsp; 76.12°E
-            </p>
-            {/* Read the story hint */}
-            <p className="mt-3 font-mono text-[9px] uppercase tracking-[0.25em] text-rust opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              READ THE STORY →
-            </p>
-          </div>
-        </motion.button>
+          <ChambaStamp />
+          <p className="mt-4 text-center font-mono text-[9px] uppercase tracking-[0.25em] text-ember opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            READ THE STORY →
+          </p>
+        </button>
 
         {/* Content — vertically centered, accounting for header + ticker */}
         <div className="relative h-full mx-auto max-w-7xl px-6 lg:px-10 flex items-center pt-28">
