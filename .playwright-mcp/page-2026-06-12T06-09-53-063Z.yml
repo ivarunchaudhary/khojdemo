@@ -1,0 +1,410 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "Khoj / India’s Taste Archive" [ref=e6] [cursor=pointer]:
+        - /url: "#top"
+        - generic [ref=e7]: Khoj
+        - generic [ref=e8]: / India’s Taste Archive
+      - navigation [ref=e9]:
+        - link "ARCHIVE" [ref=e10] [cursor=pointer]:
+          - /url: "#archive"
+        - link "FIELD NOTES" [ref=e11] [cursor=pointer]:
+          - /url: "#field-notes"
+        - link "CULTURE" [ref=e12] [cursor=pointer]:
+          - /url: "#culture"
+        - link "JOIN" [ref=e13] [cursor=pointer]:
+          - /url: "#join"
+      - button "Open cart, 0 items" [ref=e15] [cursor=pointer]:
+        - generic [ref=e16]: CART
+        - generic [ref=e17]: "0"
+  - main [ref=e18]:
+    - generic [ref=e19]:
+      - img "Colourful spice mounds at a Delhi spice market" [ref=e20]
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - text: KHOJ'ED IN CHAMBA
+          - generic [ref=e26]: •
+        - generic [ref=e27]:
+          - text: SEED → JAR
+          - generic [ref=e28]: •
+        - generic [ref=e29]:
+          - text: MADE IN INDIA, SLOWLY
+          - generic [ref=e30]: •
+        - generic [ref=e31]:
+          - text: NOW SHIPPING PAN-INDIA
+          - generic [ref=e32]: •
+        - generic [ref=e33]:
+          - text: VOL. 01 — FORGOTTEN FLAVOURS
+          - generic [ref=e34]: •
+        - generic [ref=e35]:
+          - text: KHOJ'ED IN CHAMBA
+          - generic [ref=e36]: •
+        - generic [ref=e37]:
+          - text: SEED → JAR
+          - generic [ref=e38]: •
+        - generic [ref=e39]:
+          - text: MADE IN INDIA, SLOWLY
+          - generic [ref=e40]: •
+        - generic [ref=e41]:
+          - text: NOW SHIPPING PAN-INDIA
+          - generic [ref=e42]: •
+        - generic [ref=e43]:
+          - text: VOL. 01 — FORGOTTEN FLAVOURS
+          - generic [ref=e44]: •
+        - generic [ref=e45]:
+          - text: KHOJ'ED IN CHAMBA
+          - generic [ref=e46]: •
+        - generic [ref=e47]:
+          - text: SEED → JAR
+          - generic [ref=e48]: •
+        - generic [ref=e49]:
+          - text: MADE IN INDIA, SLOWLY
+          - generic [ref=e50]: •
+        - generic [ref=e51]:
+          - text: NOW SHIPPING PAN-INDIA
+          - generic [ref=e52]: •
+        - generic [ref=e53]:
+          - text: VOL. 01 — FORGOTTEN FLAVOURS
+          - generic [ref=e54]: •
+      - button "Open Chamba story" [ref=e55] [cursor=pointer]:
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - generic [ref=e58]: FIELD STAMP
+            - generic [ref=e59]: № 047
+          - paragraph [ref=e60]:
+            - text: Chamba,
+            - text: Himachal Pradesh
+          - paragraph [ref=e62]: 32.55°N · 76.12°E
+          - paragraph [ref=e63]: READ THE STORY →
+      - generic [ref=e65]:
+        - paragraph [ref=e66]: § 01 · DISCOVERING INDIA
+        - heading "India’s Taste Archive" [level=1] [ref=e67]:
+          - text: India’s
+          - text: Taste Archive
+        - paragraph [ref=e68]: Khoj is a roving archive of disappearing regional flavours, kitchen rituals and small-town stories — collected jar by jar, from the road.
+        - link "Now available · Chamba Chukh Vol. 01 →" [ref=e69] [cursor=pointer]:
+          - /url: "#archive"
+          - generic [ref=e71]: Now available · Chamba Chukh Vol. 01
+          - generic [ref=e72]: →
+        - generic [ref=e73]:
+          - link "EXPLORE THE ARCHIVE →" [ref=e74] [cursor=pointer]:
+            - /url: "#archive"
+            - text: EXPLORE THE ARCHIVE
+            - generic [ref=e75]: →
+          - link "SHOP DISCOVERIES" [ref=e76] [cursor=pointer]:
+            - /url: "#archive"
+    - generic [ref=e78]:
+      - generic [ref=e80]:
+        - generic [ref=e81]:
+          - paragraph [ref=e82]: § 02 — THE ARCHIVE
+          - heading "Collected discoveries, one jar at a time." [level=2] [ref=e83]:
+            - text: Collected discoveries,
+            - text: one jar at a time.
+        - paragraph [ref=e84]: Every Khoj product is a postcard. Sourced from a region, made in-house from seed to jar, and indexed in our growing archive of flavours that almost slipped through.
+      - generic [ref=e85]:
+        - button "ALL" [ref=e86] [cursor=pointer]
+        - button "CHUTNEYS" [ref=e87] [cursor=pointer]
+        - button "SPICE BLENDS" [ref=e88] [cursor=pointer]
+        - button "SHERBETS" [ref=e89] [cursor=pointer]
+        - button "ARTISANAL SWEETS" [ref=e90] [cursor=pointer]
+      - generic [ref=e91]:
+        - article [ref=e93]:
+          - generic [ref=e94]:
+            - img "Chamba Chukh" [ref=e95]
+            - generic [ref=e96]: KHOJ’ED IN CHAMBA
+            - generic [ref=e97]: HERO DISCOVERY
+            - paragraph: A fiery Pahadi green chilli chutney made the old way — slow-pounded, smoke-kissed, dangerously addictive.
+          - generic [ref=e98]:
+            - paragraph [ref=e99]: CHUTNEYS · CHAMBA, HIMACHAL PRADESH
+            - heading "Chamba Chukh" [level=3] [ref=e100]
+            - generic [ref=e101]:
+              - generic [ref=e102]:
+                - paragraph [ref=e103]: PRICE
+                - paragraph [ref=e104]: ₹600
+              - generic [ref=e105]:
+                - button "Decrease quantity" [ref=e106] [cursor=pointer]:
+                  - img [ref=e107]
+                - generic [ref=e108]: "1"
+                - button "Increase quantity" [ref=e109] [cursor=pointer]:
+                  - img [ref=e110]
+            - button "ADD TO CART →" [ref=e111] [cursor=pointer]:
+              - text: ADD TO CART
+              - generic [ref=e112]: →
+        - article [ref=e114]:
+          - generic [ref=e115]:
+            - img "Sattu Laddoo" [ref=e116]
+            - generic [ref=e117]: KHOJ’ED IN BIHAR
+            - paragraph: Earthy, nutty laddoos rolled from roasted gram, jaggery and ghee. Pulled straight from a grandmother's steel dabba.
+          - generic [ref=e118]:
+            - paragraph [ref=e119]: ARTISANAL SWEETS · PATNA, BIHAR
+            - heading "Sattu Laddoo" [level=3] [ref=e120]
+            - generic [ref=e121]:
+              - generic [ref=e122]:
+                - paragraph [ref=e123]: PRICE
+                - paragraph [ref=e124]: ₹600
+              - generic [ref=e125]:
+                - button "Decrease quantity" [ref=e126] [cursor=pointer]:
+                  - img [ref=e127]
+                - generic [ref=e128]: "1"
+                - button "Increase quantity" [ref=e129] [cursor=pointer]:
+                  - img [ref=e130]
+            - button "ADD TO CART →" [ref=e131] [cursor=pointer]:
+              - text: ADD TO CART
+              - generic [ref=e132]: →
+        - article [ref=e134]:
+          - generic [ref=e135]:
+            - img "Imli Plum Sherbet" [ref=e136]
+            - generic [ref=e137]: KHOJ’ED IN PUNJAB
+            - paragraph: Tangy summer nostalgia bottled like a memory — tamarind, plum, black salt, and the loud quiet of June afternoons.
+          - generic [ref=e138]:
+            - paragraph [ref=e139]: SHERBETS · AMRITSAR, PUNJAB
+            - heading "Imli Plum Sherbet" [level=3] [ref=e140]
+            - generic [ref=e141]:
+              - generic [ref=e142]:
+                - paragraph [ref=e143]: PRICE
+                - paragraph [ref=e144]: ₹600
+              - generic [ref=e145]:
+                - button "Decrease quantity" [ref=e146] [cursor=pointer]:
+                  - img [ref=e147]
+                - generic [ref=e148]: "1"
+                - button "Increase quantity" [ref=e149] [cursor=pointer]:
+                  - img [ref=e150]
+            - button "ADD TO CART →" [ref=e151] [cursor=pointer]:
+              - text: ADD TO CART
+              - generic [ref=e152]: →
+        - article [ref=e154]:
+          - generic [ref=e155]:
+            - img "Haara Namak" [ref=e156]
+            - generic [ref=e157]: KHOJ’ED IN HARYANA
+            - paragraph: A green herbed salt blend from old North-Indian kitchens. Mint, coriander, rock salt — for everything you cook from scratch.
+          - generic [ref=e158]:
+            - paragraph [ref=e159]: SPICE BLENDS · ROHTAK, HARYANA
+            - heading "Haara Namak" [level=3] [ref=e160]
+            - generic [ref=e161]:
+              - generic [ref=e162]:
+                - paragraph [ref=e163]: PRICE
+                - paragraph [ref=e164]: ₹129
+              - generic [ref=e165]:
+                - button "Decrease quantity" [ref=e166] [cursor=pointer]:
+                  - img [ref=e167]
+                - generic [ref=e168]: "1"
+                - button "Increase quantity" [ref=e169] [cursor=pointer]:
+                  - img [ref=e170]
+            - button "ADD TO CART →" [ref=e171] [cursor=pointer]:
+              - text: ADD TO CART
+              - generic [ref=e172]: →
+    - generic [ref=e174]:
+      - generic [ref=e176]:
+        - generic [ref=e177]:
+          - paragraph [ref=e178]: § 03 — FIELD NOTES
+          - heading "Pages from the road." [level=2] [ref=e179]
+        - generic [ref=e180]:
+          - button "Scroll field notes left" [ref=e181] [cursor=pointer]:
+            - img [ref=e182]
+          - button "Scroll field notes right" [ref=e184] [cursor=pointer]:
+            - img [ref=e185]
+      - generic [ref=e187]:
+        - article [ref=e188]:
+          - img "Travel scrapbook with a ticket, cassette and folded map" [ref=e189]
+          - generic [ref=e191]:
+            - paragraph [ref=e192]: COVER · VOL. 01
+            - heading "A travel diary of taste." [level=3] [ref=e193]
+        - article [ref=e194]:
+          - generic [ref=e195]:
+            - generic [ref=e196]: № 012
+            - generic [ref=e197]: CHAMBA, HP
+          - paragraph [ref=e198]: FIELD RECIPE
+          - heading "Notes on a green chilli" [level=3] [ref=e199]
+          - paragraph [ref=e200]: Three days in a stone-walled kitchen, learning the chukh between songs.
+          - link "SHOP CHAMBA CHUKH →" [ref=e201] [cursor=pointer]:
+            - /url: "#archive"
+            - text: SHOP CHAMBA CHUKH
+            - generic [ref=e202]: →
+        - article [ref=e203]:
+          - generic [ref=e204]:
+            - generic [ref=e205]: № 018
+            - generic [ref=e206]: PATNA, BR
+          - paragraph [ref=e207]: RITUAL
+          - heading "Sattu before the heat" [level=3] [ref=e208]
+          - paragraph [ref=e209]: A grandmother's measuring cup is a fist. Her ratios never lie.
+          - link "SHOP SATTU LADDOO →" [ref=e210] [cursor=pointer]:
+            - /url: "#archive"
+            - text: SHOP SATTU LADDOO
+            - generic [ref=e211]: →
+        - article [ref=e212]:
+          - generic [ref=e213]:
+            - generic [ref=e214]: № 023
+            - generic [ref=e215]: AMRITSAR, PB
+          - paragraph [ref=e216]: MEMORY
+          - heading "June, bottled." [level=3] [ref=e217]
+          - paragraph [ref=e218]: Black salt, plum, and the loud quiet of a verandah at three in the afternoon.
+          - link "SHOP THE SHERBET →" [ref=e219] [cursor=pointer]:
+            - /url: "#archive"
+            - text: SHOP THE SHERBET
+            - generic [ref=e220]: →
+        - article [ref=e221]:
+          - generic [ref=e222]:
+            - generic [ref=e223]: № 031
+            - generic [ref=e224]: ROHTAK, HR
+          - paragraph [ref=e225]: INGREDIENT
+          - heading "Green salt, plain truth." [level=3] [ref=e226]
+          - paragraph [ref=e227]: Sometimes the most radical thing in a kitchen is the salt.
+          - link "SHOP HAARA NAMAK →" [ref=e228] [cursor=pointer]:
+            - /url: "#archive"
+            - text: SHOP HAARA NAMAK
+            - generic [ref=e229]: →
+        - article [ref=e230]:
+          - generic [ref=e231]:
+            - generic [ref=e232]: № 037
+            - generic [ref=e233]: ON THE ROAD
+          - paragraph [ref=e234]: PLAYLIST
+          - 'heading "Playlist: Highway 1A" [level=3] [ref=e235]'
+          - paragraph [ref=e236]: Lo-fi qawwalis, dadra, and the hiss of cassette tape.
+          - link "HEAR THE PLAYLIST →" [ref=e237] [cursor=pointer]:
+            - /url: "#culture"
+            - text: HEAR THE PLAYLIST
+            - generic [ref=e238]: →
+    - generic [ref=e241]:
+      - generic [ref=e242]:
+        - paragraph [ref=e243]: § 04 — CULTURE DESK
+        - heading "A living archive of modern India." [level=2] [ref=e244]
+        - paragraph [ref=e245]: Flavour doesn’t travel alone. It comes with mixtapes, train windows, half-finished paintings and overheard conversations.
+        - generic [ref=e246]:
+          - button "CHANNEL Mixtapes" [ref=e247] [cursor=pointer]:
+            - generic [ref=e248]: CHANNEL
+            - generic [ref=e249]: Mixtapes
+          - button "CHANNEL Recipes" [ref=e250] [cursor=pointer]:
+            - generic [ref=e251]: CHANNEL
+            - generic [ref=e252]: Recipes
+          - button "CHANNEL Moodboards" [ref=e253] [cursor=pointer]:
+            - generic [ref=e254]: CHANNEL
+            - generic [ref=e255]: Moodboards
+          - button "CHANNEL Founder Notes" [ref=e256] [cursor=pointer]:
+            - generic [ref=e257]: CHANNEL
+            - generic [ref=e258]: Founder Notes
+      - generic [ref=e260]:
+        - img "Vinyl records and brass spice tins" [ref=e261]
+        - generic [ref=e263]:
+          - paragraph [ref=e264]: NOW PLAYING — MIXTAPE № 04
+          - heading "Highway 1A, after dark." [level=3] [ref=e265]
+          - generic [ref=e266]:
+            - link "01 Tere Bin NUSRAT FATEH ALI KHAN 7:42" [ref=e267] [cursor=pointer]:
+              - /url: https://open.spotify.com/search/Tere%20Bin%20NUSRAT%20FATEH%20ALI%20KHAN
+              - generic [ref=e268]: "01"
+              - img [ref=e269]
+              - generic [ref=e271]:
+                - paragraph [ref=e272]: Tere Bin
+                - paragraph [ref=e273]: NUSRAT FATEH ALI KHAN
+              - generic [ref=e274]: 7:42
+              - img [ref=e275]
+            - link "02 Jugni CLINTON CEREJO · VISHAL DADLANI 5:30" [ref=e279] [cursor=pointer]:
+              - /url: https://open.spotify.com/search/Jugni%20CLINTON%20CEREJO%20%C2%B7%20VISHAL%20DADLANI
+              - generic [ref=e280]: "02"
+              - img [ref=e281]
+              - generic [ref=e283]:
+                - paragraph [ref=e284]: Jugni
+                - paragraph [ref=e285]: CLINTON CEREJO · VISHAL DADLANI
+              - generic [ref=e286]: 5:30
+              - img [ref=e287]
+            - link "03 Iktara AMIT TRIVEDI 4:08" [ref=e291] [cursor=pointer]:
+              - /url: https://open.spotify.com/search/Iktara%20AMIT%20TRIVEDI
+              - generic [ref=e292]: "03"
+              - img [ref=e293]
+              - generic [ref=e295]:
+                - paragraph [ref=e296]: Iktara
+                - paragraph [ref=e297]: AMIT TRIVEDI
+              - generic [ref=e298]: 4:08
+              - img [ref=e299]
+            - link "04 Kho Gaye Hum Kahan PRATEEK KUHAD 4:28" [ref=e303] [cursor=pointer]:
+              - /url: https://open.spotify.com/search/Kho%20Gaye%20Hum%20Kahan%20PRATEEK%20KUHAD
+              - generic [ref=e304]: "04"
+              - img [ref=e305]
+              - generic [ref=e307]:
+                - paragraph [ref=e308]: Kho Gaye Hum Kahan
+                - paragraph [ref=e309]: PRATEEK KUHAD
+              - generic [ref=e310]: 4:28
+              - img [ref=e311]
+            - link "05 Pareshaan AMIT TRIVEDI 4:45" [ref=e315] [cursor=pointer]:
+              - /url: https://open.spotify.com/search/Pareshaan%20AMIT%20TRIVEDI
+              - generic [ref=e316]: "05"
+              - img [ref=e317]
+              - generic [ref=e319]:
+                - paragraph [ref=e320]: Pareshaan
+                - paragraph [ref=e321]: AMIT TRIVEDI
+              - generic [ref=e322]: 4:45
+              - img [ref=e323]
+          - paragraph [ref=e327]: TAP ANY TRACK TO OPEN IN SPOTIFY →
+    - generic [ref=e328]:
+      - paragraph [ref=e331]: POSTAGE · KHOJ × YOU
+      - generic [ref=e333]:
+        - generic [ref=e334]:
+          - paragraph [ref=e335]: NOTES FROM THE ROAD
+          - heading "Join the Khoj." [level=2] [ref=e336]
+          - paragraph [ref=e337]: Collected stories, flavours and discoveries — sent like a postcard from wherever we are. No noise, just dispatches.
+        - generic [ref=e340]:
+          - generic [ref=e341]: YOUR ADDRESS ON THE MAP
+          - generic [ref=e342]:
+            - textbox "YOUR ADDRESS ON THE MAP" [ref=e343]:
+              - /placeholder: you@somewhere.in
+            - button "SEND POSTCARD" [ref=e344] [cursor=pointer]
+          - paragraph [ref=e345]: ONE LETTER A MONTH · UNSUBSCRIBE ANYTIME
+  - contentinfo [ref=e346]:
+    - generic [ref=e348]:
+      - generic [ref=e349]:
+        - generic [ref=e350]:
+          - paragraph [ref=e351]: Khoj.
+          - paragraph [ref=e352]: India’s Taste Archive. A roving archive of disappearing regional flavours, preserved seed-to-jar.
+          - generic [ref=e353]:
+            - link "INSTAGRAM" [ref=e354] [cursor=pointer]:
+              - /url: "#"
+            - link "SPOTIFY" [ref=e355] [cursor=pointer]:
+              - /url: "#"
+            - link "SUBSTACK" [ref=e356] [cursor=pointer]:
+              - /url: "#"
+            - link "TIKTOK" [ref=e357] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=e358]:
+          - paragraph [ref=e359]: ARCHIVE
+          - list [ref=e360]:
+            - listitem [ref=e361]:
+              - link "Chutneys" [ref=e362] [cursor=pointer]:
+                - /url: "#archive"
+            - listitem [ref=e363]:
+              - link "Spice Blends" [ref=e364] [cursor=pointer]:
+                - /url: "#archive"
+            - listitem [ref=e365]:
+              - link "Sherbets" [ref=e366] [cursor=pointer]:
+                - /url: "#archive"
+            - listitem [ref=e367]:
+              - link "Sweets" [ref=e368] [cursor=pointer]:
+                - /url: "#archive"
+        - generic [ref=e369]:
+          - paragraph [ref=e370]: INDEX
+          - list [ref=e371]:
+            - listitem [ref=e372]:
+              - link "Field Notes" [ref=e373] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e374]:
+              - link "Culture Desk" [ref=e375] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e376]:
+              - link "Join the Khoj" [ref=e377] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e378]:
+              - link "Stockists" [ref=e379] [cursor=pointer]:
+                - /url: "#"
+      - generic [ref=e380]:
+        - generic [ref=e381]: © 2026 KHOJ. MADE SLOWLY IN INDIA.
+        - generic [ref=e382]: VOL. 01 / FORGOTTEN FLAVOURS
+  - complementary [ref=e383]:
+    - generic [ref=e384]:
+      - generic [ref=e385]:
+        - paragraph [ref=e386]: YOUR ARCHIVE
+        - heading "Cart" [level=2] [ref=e387]
+      - button "CLOSE ×" [ref=e388] [cursor=pointer]:
+        - text: CLOSE
+        - generic [ref=e389]: ×
+    - generic [ref=e392]:
+      - paragraph [ref=e393]: Your archive is empty.
+      - paragraph [ref=e394]: Start collecting flavours across India.
+      - button "Explore the Archive" [ref=e395] [cursor=pointer]
