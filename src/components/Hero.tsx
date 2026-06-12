@@ -133,11 +133,31 @@ export function Hero() {
               kitchen rituals and small-town stories — collected jar by jar,
               from the road.
             </motion.p>
+            <motion.a
+              href="#archive"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.72, duration: 0.6 }}
+              className="mt-6 sm:mt-7 inline-flex items-center gap-3 bg-cream/10 hover:bg-cream/15 border border-cream/20 hover:border-cream/35 rounded-full px-4 py-2 transition-colors group"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-ember shrink-0" />
+              <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-cream/75 group-hover:text-cream transition-colors">
+                Now available&nbsp;&nbsp;·&nbsp;&nbsp;Chamba Chukh Vol. 01
+              </span>
+              <motion.span
+                initial={{ x: 0 }}
+                whileHover={{ x: 3 }}
+                className="font-mono text-[9px] text-ember group-hover:text-cream transition-colors"
+              >
+                →
+              </motion.span>
+            </motion.a>
+
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
-              className="mt-7 sm:mt-8 flex flex-wrap gap-3"
+              className="mt-5 sm:mt-6 flex flex-wrap gap-3"
             >
               <motion.a
                 href="#archive"
@@ -165,6 +185,19 @@ export function Hero() {
                 SHOP DISCOVERIES
               </motion.a>
             </motion.div>
+
+            {/* Mobile-only Chamba story link — stamp is hidden on small screens */}
+            <motion.button
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.1, duration: 0.6 }}
+              onClick={openStory}
+              className="sm:hidden mt-5 flex items-center gap-2 font-mono text-[9px] uppercase tracking-[0.35em] text-cream/60 hover:text-cream transition-colors"
+            >
+              <span className="w-5 h-px bg-cream/40" />
+              READ THE CHAMBA STORY
+              <span className="w-5 h-px bg-cream/40" />
+            </motion.button>
           </div>
         </div>
       </section>
