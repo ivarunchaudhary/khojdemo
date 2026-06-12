@@ -29,3 +29,4 @@ dist-ssr
 .code-review-graph/
 src/assets/
 public/icons.svg
+.playwright-mcp/

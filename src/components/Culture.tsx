@@ -49,7 +49,7 @@ const moodboards = [
     caption: "STONE KITCHEN",
   },
   {
-    src: "/img/chamba-chukh.png",
+    src: "/img/chamba-chukh.jpg",
     caption: "FIELD NOTE № 012",
   },
 ];
@@ -142,7 +142,7 @@ export function Culture() {
                   className="relative rounded-md overflow-hidden border border-ink/10 shadow-lg"
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1496293455970-f8581aae0e3b?auto=format&fit=crop&w=1400&q=80"
+                    src="https://images.unsplash.com/photo-1496293455970-f8581aae0e3b?auto=format&fit=crop&w=1000&q=75"
                     alt="Vinyl records and brass spice tins"
                     loading="lazy"
                     className="absolute inset-0 w-full h-full object-cover"

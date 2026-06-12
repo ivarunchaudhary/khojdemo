@@ -58,7 +58,7 @@ export const fieldNotes: FieldNote[] = [
 
 export const fieldNotesCover = {
   image:
-    "https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?auto=format&fit=crop&w=900&q=75",
   eyebrow: "COVER · VOL. 01",
   title: "A travel diary of taste.",
 };

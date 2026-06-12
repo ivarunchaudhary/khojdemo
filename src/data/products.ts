@@ -23,7 +23,7 @@ export const products: Product[] = [
       "A fiery Pahadi green chilli chutney made the old way — slow-pounded, smoke-kissed, dangerously addictive.",
     price: 600,
     featured: true,
-    image: "/img/chamba-chukh.png",
+    image: "/img/chamba-chukh.jpg",
   },
   {
     id: "sattu-laddoo",
@@ -36,7 +36,7 @@ export const products: Product[] = [
       "Earthy, nutty laddoos rolled from roasted gram, jaggery and ghee. Pulled straight from a grandmother's steel dabba.",
     price: 600,
     image:
-      "https://images.unsplash.com/photo-1635952346904-95f2ccfcd029?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1635952346904-95f2ccfcd029?auto=format&fit=crop&w=900&q=75",
   },
   {
     id: "imli-plum-sherbet",
@@ -49,7 +49,7 @@ export const products: Product[] = [
       "Tangy summer nostalgia bottled like a memory — tamarind, plum, black salt, and the loud quiet of June afternoons.",
     price: 600,
     image:
-      "https://images.unsplash.com/photo-1579888944884-c7fc5a553848?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1579888944884-c7fc5a553848?auto=format&fit=crop&w=900&q=75",
   },
   {
     id: "haara-namak",
@@ -61,7 +61,7 @@ export const products: Product[] = [
     blurb:
       "A green herbed salt blend from old North-Indian kitchens. Mint, coriander, rock salt — for everything you cook from scratch.",
     price: 129,
-    image: "/img/haara-namak.png",
+    image: "/img/haara-namak.jpg",
   },
 ];
 

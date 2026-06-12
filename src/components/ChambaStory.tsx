@@ -17,7 +17,7 @@ const slides = [
     title: "Before the roads widened.",
     body: "A hill town in the Ravi valley, so steep the postman walks. We arrived in October by local bus — the same way most people arrive, if they arrive at all. Every balcony in Chamba was hung with green chillies drying in the last of the mountain sun. The air carried pine, wood smoke, and something old and quietly fermenting.",
     image:
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=85",
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
     imgFit: "object-cover",
     imgPosition: "object-center",
   },
@@ -28,7 +28,7 @@ const slides = [
     title: "Every balcony, a different recipe.",
     body: "The Pahadi green chilli is not what you expect. Grown above two thousand metres, it develops differently from lowland varieties — less fierce, more grassy, with a slow heat that builds like a conversation. Every family in Chamba pounds their own chukh. No two are the same. No recipe has ever been written down.",
     image:
-      "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1600&q=85",
+      "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1200&q=80",
     imgFit: "object-cover",
     imgPosition: "object-center",
   },
@@ -39,7 +39,7 @@ const slides = [
     title: "Three kitchens, one ratio.",
     body: "The method is old. Pound the chillies slow in stone — not ground, not blended. Salt at intervals to draw the juice. Raw mustard oil at the finish, sharp and grassy. A whisper of asafoetida. The ratio lives in the hands, not a recipe card. We spent three days in a stone-walled kitchen at 2,100 metres, learning the rhythm between songs.",
     image:
-      "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=1600&q=85",
+      "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=1200&q=80",
     imgFit: "object-cover",
     imgPosition: "object-center",
   },
@@ -49,7 +49,7 @@ const slides = [
     location: "SEED → POUND → JAR · SMALL BATCH · VOL. 01",
     title: "Bottled slow. Shipped with a story.",
     body: "No commercial preservatives. No shortcuts. Each jar is hand-sealed in a small batch, indexed as Field Note № 012 in the Khoj archive. It ships with the field note — because the flavour alone is only half of it. This is what disappearing India tastes like, before the road reaches it.",
-    image: "/img/chamba-chukh.png",
+    image: "/img/chamba-chukh.jpg",
     imgFit: "object-contain",
     imgPosition: "object-center",
   },

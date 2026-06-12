@@ -49,8 +49,10 @@ export function Hero() {
           initial={{ scale: 1.08 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
-          src="https://images.unsplash.com/photo-1775433205046-86e060feff06?auto=format&fit=crop&w=2200&q=80"
+          src="https://images.unsplash.com/photo-1775433205046-86e060feff06?auto=format&fit=crop&w=1600&q=75"
           alt="Colourful spice mounds at a Delhi spice market"
+          fetchPriority="high"
+          decoding="async"
           className="absolute inset-0 w-full h-full object-cover object-[55%_center]"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/55 to-ink/15" />
