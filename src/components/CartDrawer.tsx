@@ -14,7 +14,7 @@ type CheckoutFields = {
 };
 
 export function CartDrawer() {
-  const { isOpen, close, items, setQty, totalPrice } = useCart();
+  const { isOpen, close, items, setQty, totalPrice, clear } = useCart();
   const list = Object.values(items);
   const [view, setView] = useState<"cart" | "checkout" | "confirmed">("cart");
   const [fields, setFields] = useState<CheckoutFields>({
@@ -45,6 +45,7 @@ export function CartDrawer() {
     setSubmitAttempted(true);
     if (!allValid) return;
     setView("confirmed");
+    clear();
   }
 
   const field = (key: keyof CheckoutFields, label: string, placeholder: string, type = "text") => {
@@ -253,7 +254,7 @@ export function CartDrawer() {
                   <span className="font-italic-display text-rust">on its way.</span>
                 </h3>
                 <p className="mt-5 font-serif text-base text-ink/70 leading-relaxed max-w-xs">
-                  We'll send a confirmation to your email. Every Khoj jar ships with the field note.
+                  We&rsquo;ll send a confirmation to your email. Every Khoj jar ships with the field note.
                 </p>
                 <button
                   onClick={handleClose}
